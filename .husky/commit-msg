@@ -1,3 +1,2 @@
-
 # 命令（例如执行测试、代码检查等）
 node scripts/check-commit.js "$1"
