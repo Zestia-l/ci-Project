@@ -1,0 +1,17 @@
+{
+  "name": "ci-project",
+  "version": "1.0.0",
+  "description": "pre-commit & delete console",
+  "license": "ISC",
+  "author": "Juicetone",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "simple-git": "^3.28.0"
+  }
+}
