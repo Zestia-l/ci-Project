@@ -19,7 +19,7 @@ const argv = require('yargs/yargs')(process.argv.slice(2))
     //选项：只能是这三个当中的一个
     choices: ['dev', 'test', 'prod'],
     //不设置默认值，必须手动指定
-    default: null
+    default: 'prod',
   })
   //调用 .argv 会触发参数解析操作，最终将解析结果存储在 argv 对象中
   .argv;
