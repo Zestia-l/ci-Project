@@ -2,31 +2,31 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]  # 触发分支，可根据需要修改
+    branches: [ main ]
   pull_request:
-    branches: [ main ]  # 触发分支，可根据需要修改
+    branches: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # 使用 Ubuntu 环境
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]  # 测试多个 Node.js 版本
+        node-version: [16.x]
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # 获取代码
+        uses: actions/checkout@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3  # 设置 Node.js 环境
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'  # 缓存 npm 依赖
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install  # 安装依赖
+        run: npm install
 
       - name: Remove console statements
-        run: node scripts/remove-console.js  # 执行移除 console 的脚本
-        env:  # 单独的 env 字段声明环境变量
+        run: node scripts/remove-console.js  
+        env:  
           NODE_ENV: ${{ github.ref == 'refs/heads/main' ? 'prod' : 'test' }}
