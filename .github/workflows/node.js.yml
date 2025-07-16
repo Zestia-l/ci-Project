@@ -28,4 +28,5 @@ jobs:
 
       - name: Remove console statements
         run: node scripts/remove-console.js  # 执行移除 console 的脚本
-        NODE_ENV: ${{ github.ref == 'refs/heads/main' ? 'prod' : 'test' }}
+        env:  # 单独的 env 字段声明环境变量
+          NODE_ENV: ${{ github.ref == 'refs/heads/main' ? 'prod' : 'test' }}
