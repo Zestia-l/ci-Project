@@ -13,5 +13,8 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "simple-git": "^3.28.0"
+  },
+  "dependencies": {
+    "yargs": "^15.4.1"
   }
 }
