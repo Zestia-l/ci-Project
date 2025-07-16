@@ -4,9 +4,9 @@ const path = require('path');
 
 const config = {
   whiteList: [
-    node_modules,      // 默认排除 node_modules
-    mobile,            // 移动端目录
-    test,              // 测试目录
+    'node_modules',      // 默认排除 node_modules
+    'mobile',            // 移动端目录
+    'test',              // 测试目录
   ]
 };
 
