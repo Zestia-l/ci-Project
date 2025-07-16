@@ -29,4 +29,4 @@ jobs:
       - name: Remove console statements
         run: node scripts/remove-console.js  
         env:  
-          NODE_ENV: ${{github.ref == 'refs/heads/main' ? 'prod' : 'test'}}
+          NODE_ENV: "${{github.ref == 'refs/heads/main' ? 'prod' : 'test'}}"
